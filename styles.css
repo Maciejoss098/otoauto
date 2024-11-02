@@ -4,71 +4,65 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
-
 header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 20px 0;
+    background: #007bff;
+    color: white;
+    padding: 10px 0;
     text-align: center;
 }
-
-nav ul {
-    list-style: none;
-    padding: 0;
+nav {
+    margin: 10px 0;
 }
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #ffffff;
+nav a {
+    margin: 0 15px;
+    color: white;
     text-decoration: none;
 }
-
-main {
-    padding: 20px;
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
-
-section {
-    margin-bottom: 20px;
-}
-
-.contact-info, .profile-form, .listing-form {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    padding: 10px 15px;
-    background: #35424a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #45a049;
-}
-
-footer {
+.search-bar {
+    margin: 20px 0;
     text-align: center;
+}
+.search-bar input {
     padding: 10px;
-    background: #35424a;
-    color: #ffffff;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    width: 80%;
+    max-width: 400px;
+}
+.listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.listing {
+    background: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.profile-container {
+    text-align: center;
+    margin: 20px auto;
+}
+.contact-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
