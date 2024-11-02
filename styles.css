@@ -31,22 +31,10 @@ main {
     text-align: center;
 }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-input, textarea {
-    width: 100%;
-    margin-bottom: 10px;
+input[type="text"] {
+    width: 80%;
     padding: 10px;
-}
-
-button {
-    padding: 10px 15px;
-    background: #5cb85c;
-    color: white;
-    border: none;
+    margin: 10px 0;
 }
 
 .listing {
