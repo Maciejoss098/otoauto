@@ -3,39 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dodaj Ogłoszenie - Otoauto</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Dodaj ogłoszenie - Otoauto</title>
 </head>
 <body>
     <header>
         <h1>Otoauto</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="create_listing.html">Dodaj ogłoszenie</a></li>
                 <li><a href="listings.html">Ogłoszenia</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
-                <li><a href="create_profile.html">Stwórz Profil</a></li>
-                <li><a href="create_listing.html">Dodaj Ogłoszenie</a></li>
+                <li><a href="create_profile.html">Stwórz profil</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Dodaj Ogłoszenie</h2>
+        <h2>Dodaj ogłoszenie</h2>
         <form id="listingForm">
-            <label for="title">Tytuł:</label>
-            <input type="text" id="title" required>
-            <label for="price">Cena:</label>
-            <input type="number" id="price" required>
-            <label for="description">Opis:</label>
-            <textarea id="description" required></textarea>
-            <label for="image">Wybierz zdjęcie:</label>
+            <input type="text" id="title" placeholder="Tytuł" required>
+            <input type="text" id="price" placeholder="Cena (zł)" required>
+            <textarea id="description" placeholder="Opis" required></textarea>
             <input type="file" id="image" accept="image/*" required>
-            <button type="submit">Dodaj Ogłoszenie</button>
+            <button type="submit">Dodaj ogłoszenie</button>
         </form>
+        <div id="listings"></div>
     </main>
     <footer>
         <p>&copy; 2024 Otoauto</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
