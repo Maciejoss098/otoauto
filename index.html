@@ -4,81 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Otoauto</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #007bff;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            margin: 10px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            color: white;
-            text-decoration: none;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .search-bar {
-            margin: 20px 0;
-            text-align: center;
-        }
-        .search-bar input {
-            padding: 10px;
-            width: 80%;
-            max-width: 400px;
-        }
-        .listings {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .listing {
-            background: white;
-            border-radius: 5px;
-            padding: 20px;
-            margin: 10px;
-            width: 30%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .form-container {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 600px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .form-container input, .form-container textarea, .form-container select {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-        }
-        .profile-container {
-            text-align: center;
-            margin: 20px auto;
-        }
-        .contact-container {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 600px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -87,40 +13,37 @@
     <nav>
         <a href="#" onclick="showPage('home')">Strona Główna</a>
         <a href="#" onclick="showPage('listings')">Ogłoszenia</a>
-        <a href="#" onclick="showPage('addListing')">Dodaj Ogłoszenie</a>
+        <a href="#" onclick="showPage('create_listing')">Dodaj Ogłoszenie</a>
         <a href="#" onclick="showPage('contact')">Kontakt</a>
-        <a href="#" onclick="showPage('createProfile')">Stwórz Profil</a>
+        <a href="#" onclick="showPage('create_profile')">Stwórz Profil</a>
     </nav>
 </header>
 
 <div class="container">
 
-    <!-- Strona główna -->
     <div id="home" class="page">
         <h2>Witaj w Otoauto!</h2>
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Wyszukaj ogłoszenia...">
         </div>
         <div class="listings" id="listings">
-            <!-- Ogłoszenia zostaną wstawione tutaj -->
+            <!-- Przykładowe ogłoszenia zostaną wstawione tutaj -->
         </div>
     </div>
 
-    <!-- Ogłoszenia -->
     <div id="listings" class="page" style="display:none;">
         <h2>Ogłoszenia</h2>
         <div class="listings" id="allListings"></div>
     </div>
 
-    <!-- Dodaj ogłoszenie -->
-    <div id="addListing" class="page" style="display:none;">
+    <div id="create_listing" class="page" style="display:none;">
         <h2>Dodaj Ogłoszenie</h2>
         <div class="form-container">
             <form id="listingForm">
                 <input type="text" id="make" placeholder="Marka" required>
                 <input type="text" id="model" placeholder="Model" required>
                 <input type="number" id="year" placeholder="Rok produkcji" required>
-                <input type="text" id="description" placeholder="Opis" required>
+                <textarea id="description" placeholder="Opis" required></textarea>
                 <input type="file" id="image" accept="image/*" required>
                 <input type="number" id="price" placeholder="Cena" required>
                 <button type="submit">Dodaj ogłoszenie</button>
@@ -128,7 +51,6 @@
         </div>
     </div>
 
-    <!-- Kontakt -->
     <div id="contact" class="page" style="display:none;">
         <h2>Kontakt</h2>
         <div class="contact-container">
@@ -138,8 +60,7 @@
         </div>
     </div>
 
-    <!-- Stwórz profil -->
-    <div id="createProfile" class="page" style="display:none;">
+    <div id="create_profile" class="page" style="display:none;">
         <h2>Stwórz Profil</h2>
         <div class="form-container">
             <form id="profileForm">
@@ -153,67 +74,6 @@
 
 </div>
 
-<script>
-    const listings = [
-        { make: "Toyota", model: "Corolla", year: 2020, description: "W dobrym stanie, z pełną historią serwisową.", price: "50 000 zł", image: "https://via.placeholder.com/150" },
-        { make: "Ford", model: "Focus", year: 2019, description: "Ekonomiczne auto, idealne do miasta.", price: "45 000 zł", image: "https://via.placeholder.com/150" },
-        { make: "Volkswagen", model: "Golf", year: 2018, description: "Zadbany samochód z niskim przebiegiem.", price: "55 000 zł", image: "https://via.placeholder.com/150" }
-    ];
-
-    function displayListings() {
-        const listingsContainer = document.getElementById("allListings");
-        listingsContainer.innerHTML = '';
-        listings.forEach((listing, index) => {
-            listingsContainer.innerHTML += `
-                <div class="listing">
-                    <img src="${listing.image}" alt="zdjęcie" style="width:100%">
-                    <h3>${listing.make} ${listing.model}</h3>
-                    <p>Rok: ${listing.year}</p>
-                    <p>${listing.description}</p>
-                    <p>Cena: ${listing.price}</p>
-                    <button onclick="viewDetails(${index})">Zobacz więcej</button>
-                </div>
-            `;
-        });
-    }
-
-    function viewDetails(index) {
-        const listing = listings[index];
-        alert(`Szczegóły ogłoszenia:\nMarka: ${listing.make}\nModel: ${listing.model}\nRok: ${listing.year}\nOpis: ${listing.description}\nCena: ${listing.price}`);
-    }
-
-    document.getElementById('listingForm').addEventListener('submit', function (event) {
-        event.preventDefault();
-        const newListing = {
-            make: this.make.value,
-            model: this.model.value,
-            year: this.year.value,
-            description: this.description.value,
-            price: this.price.value,
-            image: URL.createObjectURL(this.image.files[0])
-        };
-        listings.push(newListing);
-        alert('Ogłoszenie dodane!');
-        this.reset();
-        displayListings();
-    });
-
-    document.getElementById('profileForm').addEventListener('submit', function (event) {
-        event.preventDefault();
-        alert('Profil został stworzony!');
-        this.reset();
-    });
-
-    function showPage(pageId) {
-        document.querySelectorAll('.page').forEach(page => {
-            page.style.display = 'none';
-        });
-        document.getElementById(pageId).style.display = 'block';
-    }
-
-    // Wyświetlanie ogłoszeń na stronie głównej
-    displayListings();
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
