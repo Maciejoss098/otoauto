@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffd700;
+    text-decoration: none;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ffd700;
+}
+
+.search-bar {
+    background: #ffd700;
+    padding: 30px;
+    text-align: center;
+}
+
+.search-bar h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.search-bar form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-bar form select,
+.search-bar form button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar form button {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar form button:hover {
+    background-color: #5a6268;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.add-car-form,
+.car-listing {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-car-form input,
+.add-car-form textarea,
+.add-car-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.add-car-form button {
+    background-color: #343a40;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-car-form button:hover {
+    background-color: #5a6268;
+}
+
+.car-item {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+    transition: transform 0.2s ease;
+}
+
+.car-item:hover {
+    transform: scale(1.02);
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

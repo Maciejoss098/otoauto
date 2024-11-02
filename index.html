@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komis Samochodowy - Strona Główna</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo"><a href="index.html">AutoKomis</a></div>
+    <nav>
+        <a href="index.html">Strona Główna</a>
+        <a href="ogloszenia.html">Ogłoszenia</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="stworz_profil.html" class="profile-link">Stwórz Profil</a>
+    </nav>
+</header>
+
+<section class="search-bar">
+    <h2>Znajdź swój wymarzony samochód</h2>
+    <form>
+        <select id="carBrand">
+            <option value="">Marka</option>
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes">Mercedes</option>
+        </select>
+        <select id="carModel">
+            <option value="">Model</option>
+            <option value="A4">A4</option>
+            <option value="3 Series">3 Series</option>
+            <option value="C-Class">C-Class</option>
+        </select>
+        <select id="carYear">
+            <option value="">Rok produkcji</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+        </select>
+        <button type="button" onclick="searchCars()">Szukaj</button>
+    </form>
+</section>
+
+<section class="main-content">
+    <h2>Dodaj Ogłoszenie</h2>
+    <form class="add-car-form">
+        <input type="text" id="carName" placeholder="Marka" required>
+        <input type="text" id="carModel" placeholder="Model" required>
+        <input type="number" id="carYear" placeholder="Rok produkcji" required>
+        <input type="number" id="carPrice" placeholder="Cena" required>
+        <input type="tel" id="carPhone" placeholder="Telefon" required>
+        <textarea id="carDescription" placeholder="Opis pojazdu" required></textarea>
+        <input type="file" id="carImage" accept="image/*">
+        <button type="button" id="addCarButton">Dodaj Ogłoszenie</button>
+    </form>
+
+    <h2>Ogłoszenia Samochodowe</h2>
+    <div class="car-listing" id="carListing">
+        <!-- Przykładowe ogłoszenia będą dodawane dynamicznie -->
+    </div>
+</section>
+
+<footer>
+    <p>&copy; <span id="currentYear"></span> AutoKomis - Wszelkie prawa zastrzeżone</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

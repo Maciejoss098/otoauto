@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj Ogłoszenie - AutoKomis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1><a href="index.html">AutoKomis</a></h1>
+    <nav>
+        <a href="index.html">Strona Główna</a>
+        <a href="dodaj_ogloszenie.html">Dodaj Ogłoszenie</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="stworz_profil.html">Stwórz Profil</a>
+    </nav>
+</header>
+
+<main>
+    <section class="form-section">
+        <h2>Dodaj Nowe Ogłoszenie</h2>
+        <form id="announcement-form">
+            <label for="brand">Marka:</label>
+            <input type="text" id="brand" placeholder="Podaj markę" required>
+
+            <label for="model">Model:</label>
+            <input type="text" id="model" placeholder="Podaj model" required>
+
+            <label for="year">Rok produkcji:</label>
+            <input type="number" id="year" placeholder="Podaj rok" required>
+
+            <label for="price">Cena:</label>
+            <input type="number" id="price" placeholder="Podaj cenę" required>
+
+            <label for="phone">Telefon kontaktowy:</label>
+            <input type="tel" id="phone" placeholder="Podaj numer telefonu" required>
+
+            <label for="description">Opis:</label>
+            <textarea id="description" placeholder="Dodaj opis pojazdu" required></textarea>
+
+            <button type="button" onclick="addAnnouncement()">Dodaj Ogłoszenie</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 AutoKomis</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

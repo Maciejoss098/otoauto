@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stwórz Profil - AutoKomis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo"><a href="index.html">AutoKomis</a></div>
+    <nav>
+        <a href="index.html">Strona Główna</a>
+        <a href="ogloszenia.html">Ogłoszenia</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="stworz_profil.html">Stwórz Profil</a>
+    </nav>
+</header>
+
+<main>
+    <section class="profile-creation">
+        <h2>Stwórz Profil</h2>
+        <form>
+            <label for="username">Nazwa użytkownika:</label>
+            <input type="text" id="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" required>
+
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" required>
+
+            <button type="button" onclick="alert('Profil został pomyślnie utworzony!')">Stwórz Profil</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 AutoKomis - Wszelkie prawa zastrzeżone</p>
+</footer>
+
+</body>
+</html>
