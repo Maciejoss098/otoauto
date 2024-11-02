@@ -5,7 +5,7 @@ const listings = [
 ];
 
 function displayListings() {
-    const listingsContainer = document.getElementById("allListings");
+    const listingsContainer = document.getElementById("listings");
     listingsContainer.innerHTML = '';
     listings.forEach((listing, index) => {
         listingsContainer.innerHTML += `
