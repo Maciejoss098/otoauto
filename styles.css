@@ -1,135 +1,74 @@
-* {
-    box-sizing: border-box;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #f2f2f2;
-    color: #333;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #343a40;
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .logo a {
-    font-size: 28px;
-    font-weight: bold;
-    color: #ffd700;
-    text-decoration: none;
-}
-
-header nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-header nav a:hover {
-    color: #ffd700;
-}
-
-.search-bar {
-    background: #ffd700;
-    padding: 30px;
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
     text-align: center;
 }
 
-.search-bar h2 {
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
     margin-bottom: 20px;
-    font-size: 26px;
 }
 
-.search-bar form {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.search-bar form select,
-.search-bar form button {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    transition: background-color 0.3s ease;
-}
-
-.search-bar form button {
-    background-color: #343a40;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.search-bar form button:hover {
-    background-color: #5a6268;
-}
-
-.main-content {
+.contact-info, .profile-form, .listing-form {
+    background: #ffffff;
     padding: 20px;
-}
-
-.add-car-form,
-.car-listing {
-    background: #fff;
-    padding: 20px;
-    margin-top: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.add-car-form input,
-.add-car-form textarea,
-.add-car-form button {
+input, textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-.add-car-form button {
-    background-color: #343a40;
-    color: white;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.add-car-form button:hover {
-    background-color: #5a6268;
-}
-
-.car-item {
-    border: 1px solid #ddd;
     margin: 10px 0;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: white;
-    transition: transform 0.2s ease;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.car-item:hover {
-    transform: scale(1.02);
+button {
+    padding: 10px 15px;
+    background: #35424a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
 }
 
 footer {
-    background-color: #343a40;
-    color: white;
     text-align: center;
-    padding: 15px 0;
-    position: fixed;
+    padding: 10px;
+    background: #35424a;
+    color: #ffffff;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
