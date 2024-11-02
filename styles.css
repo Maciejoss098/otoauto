@@ -2,16 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
 }
 
 header {
-    background-color: #343a40;
-    color: white;
-    padding: 10px 0;
-}
-
-header h1 {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -22,62 +18,43 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin-right: 15px;
 }
 
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
 }
 
 main {
     padding: 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #343a40;
-    color: white;
-}
-
-.contact-info {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
     text-align: center;
 }
 
-input[type="file"] {
-    margin: 10px auto;
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #28a745;
+    padding: 10px 15px;
+    background: #5cb85c;
     color: white;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-button:hover {
-    background-color: #218838;
-}
-
-h2 {
-    text-align: center;
-}
-
-h3 {
-    text-align: left;
-}
-
-#listings div {
-    border: 1px solid #ddd;
+.listing {
+    border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;
     margin: 10px;
+    text-align: left;
+    display: inline-block;
+    width: 300px; /* lub dowolna szerokość */
 }
