@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj Ogłoszenie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dodaj Ogłoszenie</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="create_listing.html">Kup lub Sprzedaj</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="create_profile.html">Stwórz profil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="listing-form">
+            <h2>Formularz dodawania ogłoszenia</h2>
+            <form id="listingForm">
+                <label for="carMake">Marka:</label>
+                <input type="text" id="carMake" required>
+
+                <label for="carModel">Model:</label>
+                <input type="text" id="carModel" required>
+
+                <label for="carYear">Rok produkcji:</label>
+                <input type="number" id="carYear" required>
+
+                <label for="phone">Numer telefonu:</label>
+                <input type="tel" id="phone" required>
+
+                <label for="description">Opis:</label>
+                <textarea id="description" required></textarea>
+
+                <label for="image">Zdjęcie (link):</label>
+                <input type="url" id="image">
+
+                <button type="submit">Dodaj ogłoszenie</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Komis Samochodowy</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
