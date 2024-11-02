@@ -3,46 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Otoauto</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Otoauto</title>
 </head>
 <body>
     <header>
         <h1>Otoauto</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="create_listing.html">Dodaj ogłoszenie</a></li>
                 <li><a href="listings.html">Ogłoszenia</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
-                <li><a href="create_profile.html">Stwórz Profil</a></li>
-                <li><a href="create_listing.html">Dodaj Ogłoszenie</a></li>
+                <li><a href="create_profile.html">Stwórz profil</a></li>
             </ul>
         </nav>
-        <input type="text" id="search" placeholder="Wyszukaj ogłoszenia...">
+        <input type="text" id="search" placeholder="Szukaj ogłoszeń..." oninput="filterListings()">
     </header>
     <main>
         <h2>Ogłoszenia</h2>
         <div id="listings">
+            <!-- Nieprawdziwe ogłoszenia -->
             <div class="listing">
-                <h3>Ford Focus 2018</h3>
-                <p>Cena: 45 000 zł</p>
-                <p>Opis: Dobrze utrzymany, ekonomiczny samochód.</p>
+                <h3>Honda Civic</h3>
+                <p>Cena: 30,000 zł</p>
+                <p>Opis: Świetny stan, regularnie serwisowany.</p>
+                <img src="honda-civic.jpg" alt="Honda Civic" style="max-width: 100%;">
             </div>
             <div class="listing">
-                <h3>Volkswagen Golf 2019</h3>
-                <p>Cena: 55 000 zł</p>
-                <p>Opis: Stylowy hatchback z niskim przebiegiem.</p>
+                <h3>Ford Focus</h3>
+                <p>Cena: 25,000 zł</p>
+                <p>Opis: Komfortowy samochód, idealny do codziennej jazdy.</p>
+                <img src="ford-focus.jpg" alt="Ford Focus" style="max-width: 100%;">
             </div>
-            <div class="listing">
-                <h3>BMW 320i 2020</h3>
-                <p>Cena: 85 000 zł</p>
-                <p>Opis: Luksusowy sedan, perfekcyjny stan.</p>
-            </div>
+            <!-- Dodaj więcej ogłoszeń według potrzeb -->
         </div>
     </main>
     <footer>
         <p>&copy; 2024 Otoauto</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
