@@ -18,26 +18,11 @@
                 <li><a href="create_profile.html">Stwórz profil</a></li>
             </ul>
         </nav>
-        <input type="text" id="search" placeholder="Szukaj ogłoszeń..." oninput="filterListings()">
     </header>
     <main>
         <h2>Ogłoszenia</h2>
-        <div id="listings">
-            <!-- Nieprawdziwe ogłoszenia -->
-            <div class="listing">
-                <h3>Honda Civic</h3>
-                <p>Cena: 30,000 zł</p>
-                <p>Opis: Świetny stan, regularnie serwisowany.</p>
-                <img src="honda-civic.jpg" alt="Honda Civic" style="max-width: 100%;">
-            </div>
-            <div class="listing">
-                <h3>Ford Focus</h3>
-                <p>Cena: 25,000 zł</p>
-                <p>Opis: Komfortowy samochód, idealny do codziennej jazdy.</p>
-                <img src="ford-focus.jpg" alt="Ford Focus" style="max-width: 100%;">
-            </div>
-            <!-- Dodaj więcej ogłoszeń według potrzeb -->
-        </div>
+        <input type="text" id="searchBar" placeholder="Szukaj ogłoszeń..." onkeyup="searchListings()">
+        <div id="listings"></div>
     </main>
     <footer>
         <p>&copy; 2024 Otoauto</p>
