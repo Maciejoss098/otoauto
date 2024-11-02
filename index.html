@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Otoauto</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,17 +12,37 @@
         <nav>
             <ul>
                 <li><a href="index.html">Strona Główna</a></li>
-                <li><a href="ogloszenia.html">Ogłoszenia</a></li>
+                <li><a href="listings.html">Ogłoszenia</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
                 <li><a href="create_profile.html">Stwórz Profil</a></li>
+                <li><a href="create_listing.html">Dodaj Ogłoszenie</a></li>
             </ul>
-            <input type="text" id="search" placeholder="Szukaj...">
         </nav>
+        <input type="text" id="search" placeholder="Wyszukaj ogłoszenia...">
     </header>
     <main>
-        <h2>Aktualne ogłoszenia</h2>
-        <div id="listings"></div>
-        <button onclick="showCreateListingForm()">Dodaj ogłoszenie</button>
+        <h2>Ogłoszenia</h2>
+        <div id="listings">
+            <div class="listing">
+                <h3>Ford Focus 2018</h3>
+                <p>Cena: 45 000 zł</p>
+                <p>Opis: Dobrze utrzymany, ekonomiczny samochód.</p>
+            </div>
+            <div class="listing">
+                <h3>Volkswagen Golf 2019</h3>
+                <p>Cena: 55 000 zł</p>
+                <p>Opis: Stylowy hatchback z niskim przebiegiem.</p>
+            </div>
+            <div class="listing">
+                <h3>BMW 320i 2020</h3>
+                <p>Cena: 85 000 zł</p>
+                <p>Opis: Luksusowy sedan, perfekcyjny stan.</p>
+            </div>
+        </div>
     </main>
+    <footer>
+        <p>&copy; 2024 Otoauto</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
