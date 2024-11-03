@@ -23,11 +23,14 @@ let listingsArray = [
     { title: "Dacia Duster", brand: "Dacia", model: "Duster", year: "2016", price: "41000", description: "Dostępne w dobrej cenie.", image: "https://www.tapeciarnia.pl/fotki/d/23840_1450431659_7396.jpg" },
 ];
 
-function displayListings(filteredListings = listingsArray) {
+let listingsArray = JSON.parse(localStorage.getItem('listings')) || [];
+
+// Funkcja do wyświetlania ogłoszeń
+function displayListings() {
     const listingsDiv = document.getElementById('listings');
     listingsDiv.innerHTML = '';
 
-    filteredListings.forEach(listing => {
+    listingsArray.forEach(listing => {
         const newListingDiv = document.createElement('div');
         newListingDiv.className = 'listing';
         newListingDiv.innerHTML = `
@@ -51,44 +54,18 @@ function searchListings() {
         listing.brand.toLowerCase().includes(query) ||
         listing.model.toLowerCase().includes(query)
     );
-    displayListings(filteredListings);
+    displayFilteredListings(filteredListings);
 }
 
 // Wyświetlenie ogłoszeń przy starcie
-displayListings();
-let listingsArray = JSON.parse(localStorage.getItem('listings')) || [];
-// Funkcja do wyświetlania ogłoszeń
-function displayListings(filteredListings = listingsArray) {
-    const listingsDiv = document.getElementById('listings');
-    listingsDiv.innerHTML = '';
-    filteredListings.forEach(listing => {
-        const newListingDiv = document.createElement('div');
-        newListingDiv.className = 'listing';
-        newListingDiv.innerHTML = `
-            <h3>${listing.title}</h3>
-            <p>Marka: ${listing.brand}</p>
-            <p>Model: ${listing.model}</p>
-            <p>Rok: ${listing.year}</p>
-            <p>Cena: ${listing.price} zł</p>
-            <p>Opis: ${listing.description}</p>
-            <img src="${listing.image}" alt="${listing.title}" style="max-width: 100%;">
-        `;
-        listingsDiv.appendChild(newListingDiv);
-    });
+if (document.getElementById('listings')) {
+    displayListings();
 }
-// Funkcja do wyszukiwania ogłoszeń
-function searchListings() {
-    const query = document.getElementById('searchBar').value.toLowerCase();
-    const filteredListings = listingsArray.filter(listing => 
-        listing.title.toLowerCase().includes(query) ||
-        listing.brand.toLowerCase().includes(query) ||
-        listing.model.toLowerCase().includes(query)
-    );
-    displayListings(filteredListings);
-}
+
 // Funkcja do dodawania ogłoszenia
-document.getElementById('listingForm').addEventListener('submit', function(event) {
+document.getElementById('listingForm')?.addEventListener('submit', function(event) {
     event.preventDefault();
+
     const title = document.getElementById('title').value;
     const brand = document.getElementById('brand').value;
     const model = document.getElementById('model').value;
@@ -115,5 +92,3 @@ document.getElementById('listingForm').addEventListener('submit', function(event
     };
     reader.readAsDataURL(imageFile); // Wczytaj obraz jako URL
 });
-// Wyświetlenie ogłoszeń przy starcie
-displayListings();
